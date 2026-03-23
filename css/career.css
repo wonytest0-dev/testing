@@ -1,0 +1,112 @@
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px) scale(0.96);
+
+filter:blur(8px);
+
+transition:all 1.2s cubic-bezier(.17,.67,.3,1);
+
+}
+
+/* ACTIVE */
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+filter:blur(0);
+
+}
+
+body{
+background:#000;
+font-family:'Poppins',sans-serif;
+}
+
+
+/* SECTION */
+.career-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  line-height: 1.8;
+  background: #0d0d0d; /* dark background */
+  color: #ffffff; /* semua teks putih */
+}
+
+/* TITLE */
+.career-section h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* BLOCK */
+.career-block {
+  margin-bottom: 60px;
+}
+
+/* SUBTITLE */
+.career-block h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffffff;
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+/* IMAGE */
+.career-block img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+/* TEXT */
+.career-block p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #aaa;
+}
+
+a:active {
+  color: white;
+}
+
+
+.support-note {
+  font-size: 6px;
+  font-style: italic;
+  color: #aaa;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* biar link ikut style tapi tetap keliatan */
+.support-note a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.support-note a:hover {
+  color: #fff;
+}

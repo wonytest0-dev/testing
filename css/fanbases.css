@@ -1,0 +1,323 @@
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px) scale(0.96);
+
+filter:blur(8px);
+
+transition:all 1.2s cubic-bezier(.17,.67,.3,1);
+
+}
+
+/* ACTIVE */
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+filter:blur(0);
+
+}
+
+body{
+background:#000;
+font-family:'Poppins',sans-serif;
+}
+
+
+/* ============================= */
+/* JIMIN FANBASE SECTION */
+/* ============================= */
+
+.fanbase-title{
+color:white;
+font-size:34px;
+letter-spacing:3px;
+text-align:center;
+margin-bottom:10px;
+}
+
+.fanbase-desc{
+color:white;
+opacity:0.8;
+text-align:center;
+margin-bottom:40px;
+}
+
+.fanbase-section{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+.fanbase-title{
+
+font-size:34px;
+letter-spacing:3px;
+margin-bottom:10px;
+
+}
+
+.fanbase-desc{
+
+opacity:0.7;
+margin-bottom:50px;
+
+}
+
+
+/* GRID */
+
+.fanbase-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+
+/* CARD */
+
+.fanbase-card{
+
+text-decoration:none;
+
+color:rgb(5, 4, 4);
+
+text-align:center;
+
+}
+
+
+/* IMAGE BULAT */
+
+.fanbase-card img{
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+display:block;
+
+margin:auto;
+
+transition:0.3s;
+
+}
+
+
+/* HOVER */
+
+.fanbase-card img:hover{
+
+transform:scale(1.08);
+
+}
+
+
+/* TEXT */
+
+.fanbase-card p{
+
+margin-top:12px;
+
+font-size:14px;
+
+background:#FFC400;
+
+padding:8px 12px;
+
+border-radius:6px;
+
+display:inline-block;
+
+}
+
+/* ============================= */
+/* JIMIN FANSITE SECTION */
+/* ============================= */
+
+.fansite-section{
+padding:80px 20px;
+text-align:center;
+}
+
+.fansite-title{
+color:white;
+font-size:34px;
+letter-spacing:3px;
+margin-bottom:10px;
+}
+
+.fansite-desc{
+color:white;
+opacity:0.8;
+margin-bottom:50px;
+}
+
+
+/* GRID */
+
+.fansite-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+max-width:700px;
+margin:auto;
+}
+
+
+/* CARD */
+
+.fansite-card{
+text-decoration:none;
+color:white;
+text-align:center;
+}
+
+
+/* IMAGE BULAT */
+
+.fansite-card img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:auto;
+transition:0.3s;
+}
+
+.fansite-card img:hover{
+transform:scale(1.08);
+}
+
+
+/* BUTTON */
+
+.fansite-card p{
+margin-top:12px;
+font-size:14px;
+background:#FFD21F;
+color:black;
+padding:10px 16px;
+border-radius:8px;
+display:inline-block;
+font-weight:600;
+}
+
+/* ============================= */
+/* BIG FAN ACCOUNTS JIMIN */
+/* ============================= */
+
+.bigfan-section{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+.bigfan-title{
+
+color:white;
+font-size:34px;
+letter-spacing:3px;
+margin-bottom:10px;
+
+}
+
+.bigfan-desc{
+
+color:white;
+opacity:0.8;
+margin-bottom:50px;
+
+}
+
+
+/* GRID */
+
+.bigfan-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+max-width:700px;
+margin:auto;
+
+}
+
+
+/* CARD */
+
+.bigfan-card{
+
+text-decoration:none;
+color:white;
+text-align:center;
+
+}
+
+
+/* IMAGE BULAT */
+
+.bigfan-card img{
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+display:block;
+
+margin:auto;
+
+transition:0.3s;
+
+}
+
+.bigfan-card img:hover{
+
+transform:scale(1.08);
+
+}
+
+
+/* BUTTON */
+
+.bigfan-card p{
+
+margin-top:12px;
+
+font-size:14px;
+
+background:#FFD21F;
+
+color:black;
+
+padding:10px 16px;
+
+border-radius:8px;
+
+display:inline-block;
+
+font-weight:600;
+
+}

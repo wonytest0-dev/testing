@@ -1,0 +1,879 @@
+@keyframes pageReveal{
+
+from{
+transform:scale(0.96);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+
+body{
+
+font-family: 'Poppins', sans-serif;
+animation:pageReveal 0.8s ease;
+
+
+}
+
+.shop-page{
+background:#000;
+color:white;
+
+padding-top:100px;
+padding-bottom:100px;
+
+font-family:'Montserrat',sans-serif;
+text-align:center;
+}
+
+
+/* =========================
+SHOP TITLE
+========================= */
+
+.shop-title{
+font-size:36px;
+letter-spacing:4px;
+margin-bottom:60px;
+color:white;
+}
+
+
+/* =========================
+HERO SECTION
+========================= */
+
+.shop-hero{
+position:relative;
+
+width:100%;
+height:500px;
+
+overflow:hidden;
+
+margin-bottom:80px;
+}
+
+
+/* HERO IMAGE */
+
+.shop-hero img{
+width:100%;
+height:100%;
+
+object-fit:cover;
+display:block;
+}
+
+
+/* DARK OVERLAY */
+
+.shop-hero::after{
+content:"";
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.5);
+
+z-index:1;
+}
+
+
+/* HERO TEXT */
+
+.shop-hero-text{
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+color:white;
+
+z-index:2;
+
+width:90%;
+max-width:600px;
+}
+
+
+/* HERO TITLE */
+
+.shop-hero-text h1{
+font-size:42px;
+letter-spacing:4px;
+margin-bottom:10px;
+}
+
+
+/* HERO SUBTITLE */
+
+.shop-hero-text p{
+font-size:16px;
+opacity:0.9;
+}
+
+
+/* =========================
+PRODUCT GRID
+========================= */
+
+.shop-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+max-width:1000px;
+margin:auto;
+
+padding:0 20px;
+
+}
+
+
+/* =========================
+PRODUCT CARD
+========================= */
+
+.shop-item{
+
+background:#0a0a0a;
+
+padding:20px;
+
+border-radius:14px;
+
+transition:0.3s;
+
+color:white;
+
+}
+
+
+.shop-item:hover{
+
+transform:translateY(-6px);
+
+background:#111;
+
+}
+
+
+/* PRODUCT IMAGE */
+
+.shop-item img{
+
+width:100%;
+
+border-radius:10px;
+
+margin-bottom:15px;
+
+}
+
+
+/* PRODUCT NAME */
+
+.shop-item h3{
+
+font-size:16px;
+
+letter-spacing:1px;
+
+margin-bottom:6px;
+
+color:white;
+
+}
+
+
+/* PRICE */
+
+.shop-item p{
+
+opacity:0.7;
+
+margin-bottom:12px;
+
+}
+
+
+/* BUTTON */
+
+.shop-item button{
+
+background:white;
+
+color:black;
+
+border:none;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+font-size:13px;
+
+transition:0.3s;
+
+}
+
+
+.shop-item button:hover{
+
+background:#ccc;
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.shop-hero{
+height:350px;
+}
+
+.shop-hero-text h1{
+font-size:28px;
+}
+
+.shop-title{
+font-size:28px;
+}
+
+.shop-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+
+@media(max-width:480px){
+
+.shop-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* =========================
+BUY NOW FOR JIMIN BANNER
+========================= */
+
+.shop-banner{
+
+width:100%;
+overflow:hidden;
+
+background:#000;
+
+padding:20px 0;
+
+}
+
+
+/* SCROLL TRACK */
+
+.shop-banner-track{
+
+display:flex;
+white-space:nowrap;
+
+animation:jiminBanner 14s linear infinite;
+
+}
+
+
+/* TEXT STYLE */
+
+.shop-banner span{
+
+font-family:'Montserrat',sans-serif;
+
+font-size:24px;
+
+letter-spacing:4px;
+
+font-weight:500;
+
+color:white;
+
+padding-right:80px;
+
+opacity:0.95;
+
+text-shadow:0 0 6px rgba(255,255,255,0.25);
+
+}
+
+
+/* SCROLL ANIMATION */
+
+@keyframes jiminBanner{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.shop-banner{
+
+padding:16px 0;
+
+}
+
+.shop-banner span{
+
+font-size:18px;
+letter-spacing:3px;
+
+}
+
+}
+
+/* =========================
+ALBUM SECTION
+========================= */
+
+.album-section{
+padding:70px 20px;
+background:#000;
+color:white;
+text-align:center;
+}
+
+/* TITLE */
+
+.album-title{
+font-size:28px;
+letter-spacing:3px;
+margin-bottom:50px;
+}
+
+/* WRAPPER */
+
+.album-wrapper{
+position:relative;
+max-width:650px;   /* tidak full layar */
+margin:auto;
+overflow:visible;   /* diperbaiki supaya panah tidak terpotong */
+}
+
+/* SLIDER */
+
+.album-slider{
+overflow:hidden;
+}
+
+/* TRACK (HORIZONTAL) */
+
+.album-track{
+display:flex;      /* membuat album ke samping */
+gap:25px;
+}
+
+/* CARD */
+
+.album-card{
+flex:0 0 150px;    /* ukuran album kecil */
+text-align:center;
+}
+
+/* IMAGE */
+
+.album-card img{
+width:150px;
+height:150px;
+object-fit:cover;
+border-radius:12px;
+display:block;
+margin:auto;
+}
+
+/* ORDER BUTTON */
+
+.album-card a{
+display:block;
+width:120px;
+
+margin:12px auto;   /* center */
+
+font-size:11px;
+letter-spacing:2px;
+
+color:white;
+border:1px solid white;
+
+padding:6px 0;
+
+border-radius:20px;
+
+text-decoration:none;
+transition:0.3s;
+}
+
+.album-card a:hover{
+background:white;
+color:black;
+}
+
+/* ARROWS */
+
+.album-arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+
+background:rgba(0,0,0,0.7);
+color:white;
+
+border:none;
+font-size:18px;
+
+cursor:pointer;
+
+padding:8px 12px;
+border-radius:50%;
+
+z-index:10;
+}
+
+/* LEFT */
+
+.album-arrow.left{
+left:10px;
+}
+
+/* RIGHT */
+
+.album-arrow.right{
+right:10px;
+}
+
+
+
+/* ================= NEW ALBUM SECTION ================= */
+
+.vinyl-section{
+
+padding:80px 20px;
+background:#000;
+text-align:center;
+color:white;
+
+}
+
+/* TITLE */
+
+.vinyl-section .vinyl-title{
+
+font-size:26px;
+letter-spacing:3px;
+margin-bottom:40px;
+
+}
+
+/* IMAGE */
+
+.vinyl-section .vinyl-image{
+
+max-width:520px;
+margin:0 auto;
+padding:0 20px;
+
+}
+
+.vinyl-section .vinyl-image img{
+
+width:100%;
+border-radius:14px;
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
+
+}
+
+/* BUY BUTTON */
+
+.vinyl-section .vinyl-buy{
+
+display:inline-block;
+margin-top:30px;
+padding:10px 30px;
+
+border:1px solid white;
+border-radius:25px;
+
+color:white;
+text-decoration:none;
+
+font-size:12px;
+letter-spacing:2px;
+
+transition:0.3s;
+
+}
+
+.vinyl-section .vinyl-buy:hover{
+
+background:white;
+color:black;
+
+}
+
+
+
+/* =========================
+MUSE MERCH
+========================= */
+
+.muse-merch{
+
+padding:100px 20px;
+background:#000;
+color:white;
+text-align:center;
+
+}
+
+.muse-title{
+
+font-size:28px;
+letter-spacing:4px;
+margin-bottom:60px;
+
+}
+
+/* WRAPPER */
+
+.muse-wrapper{
+
+position:relative;
+max-width:950px;
+margin:auto;
+overflow:hidden;
+
+}
+
+/* SLIDER */
+
+.muse-slider{
+overflow:hidden;
+}
+
+/* TRACK */
+
+.muse-track{
+
+display:flex;
+gap:24px;
+
+}
+
+/* ITEM */
+
+.muse-item{
+
+flex:0 0 200px;
+
+}
+
+/* IMAGE */
+
+.muse-item img{
+
+width:200px;
+height:200px;
+
+object-fit:cover;
+
+border-radius:16px;
+
+transition:0.4s;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+
+}
+
+/* HOVER */
+
+.muse-item img:hover{
+
+transform:scale(1.08);
+box-shadow:0 20px 60px rgba(255,255,255,0.2);
+
+}
+
+/* ARROWS */
+
+.muse-arrow{
+
+position:absolute;
+top:50%;
+
+transform:translateY(-50%);
+
+background:rgba(0,0,0,0.7);
+color:white;
+
+border:none;
+
+font-size:20px;
+
+cursor:pointer;
+
+padding:10px 14px;
+
+border-radius:50%;
+
+z-index:20;
+
+}
+
+.muse-arrow.left{
+left:-15px;
+}
+
+.muse-arrow.right{
+right:-15px;
+}
+
+/* BUY BUTTON */
+
+.muse-buy{
+
+display:inline-block;
+
+margin-top:50px;
+
+padding:12px 36px;
+
+border:1px solid white;
+border-radius:30px;
+
+font-size:13px;
+letter-spacing:3px;
+
+color:white;
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+.muse-buy:hover{
+
+background:white;
+color:black;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.muse-item{
+
+flex:0 0 150px;
+
+}
+
+.muse-item img{
+
+width:150px;
+height:150px;
+
+}
+
+}
+
+
+
+/* =========================
+JIMIN PRODUCTION DIARY
+========================= */
+
+.production-diary{
+
+padding:100px 20px;
+background:#000;
+text-align:center;
+color:white;
+
+}
+
+.production-title{
+
+font-size:28px;
+letter-spacing:3px;
+margin-bottom:40px;
+
+}
+
+.production-image{
+
+max-width:520px;
+margin:auto;
+padding:0 20px;
+
+}
+
+.production-image img{
+
+width:100%;
+border-radius:14px;
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
+
+}
+
+/* BUTTON */
+
+.production-btn{
+
+display:inline-block;
+
+margin-top:30px;
+padding:10px 34px;
+
+border:1px solid white;
+border-radius:25px;
+
+color:white;
+text-decoration:none;
+
+font-size:12px;
+letter-spacing:2px;
+
+transition:0.3s;
+
+}
+
+.production-btn:hover{
+
+background:white;
+color:black;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.production-title{
+font-size:24px;
+}
+
+.production-image{
+max-width:90%;
+}
+
+}
+
+/* ================= CAPTION ================= */
+
+.gallery-caption{
+
+position:absolute;
+
+bottom:45px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-family:'Montserrat',sans-serif;
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:white;
+
+text-transform:uppercase;
+
+background:rgba(0,0,0,0.4);
+
+padding:4px 10px;
+
+border-radius:10px;
+
+backdrop-filter:blur(4px);
+
+}
+
+/* ===== PROFILE EXPLORE (UNIVERSAL) ===== */
+
+.profile-explore {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin: 28px auto 0;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 14px;
+  max-width: 520px;
+}
+
+/* link */
+.profile-explore a {
+  color: #d1d5db;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 1px;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.profile-explore a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+
+  .profile-explore {
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 18px;
+  }
+
+  .profile-explore a {
+    display: inline-block;
+    margin: 4px 2px;
+  }
+
+}

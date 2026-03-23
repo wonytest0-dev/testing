@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #000, #111);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CONTAINER */
+.login-container {
+  text-align: center;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* BOX */
+.login-box {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 20px;
+  width: 280px;
+  backdrop-filter: blur(10px);
+}
+
+/* TITLE */
+.login-box h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* INPUT */
+.login-box input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  
+}
+
+/* BUTTON */
+#login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+#login-btn:hover {
+  background: white;
+  color: black;
+  align-items: center;
+}
+
+/* REGISTER */
+.register-text {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+#register-link {
+  cursor: pointer;
+  text-decoration: underline;
+}

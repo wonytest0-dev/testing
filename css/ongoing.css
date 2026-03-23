@@ -1,0 +1,101 @@
+/* ========================= */
+/* SUPPORT PROJECT SECTION */
+/* ========================= */
+
+.project-section{
+padding:80px 20px;
+text-align:center;
+}
+
+.project-title{
+font-size:30px;
+letter-spacing:3px;
+margin-bottom:50px;
+color:white;
+}
+
+
+/* GRID */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+
+/* CARD */
+
+.project-card{
+background:#fff6dc;
+border-radius:10px;
+padding:20px;
+text-align:left;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+}
+
+
+/* IMAGE */
+
+.project-image{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+
+/* TITLE */
+
+.project-card h3{
+font-size:18px;
+margin-bottom:10px;
+color:#2b1d12;
+}
+
+
+/* DESCRIPTION */
+
+.project-desc{
+font-size:14px;
+line-height:1.6;
+margin-bottom:10px;
+color:#3a2a1a;
+}
+
+
+/* DATE */
+
+.project-date{
+font-size:13px;
+opacity:0.7;
+margin-bottom:15px;
+color:#2b1d12;
+}
+
+
+/* BUTTON */
+
+.project-btn{
+display:inline-block;
+padding:8px 18px;
+border:1px solid #000;
+border-radius:20px;
+text-decoration:none;
+color:black;
+font-size:13px;
+transition:0.3s;
+}
+
+.project-btn:hover{
+background:#000;
+color:#fff;
+}

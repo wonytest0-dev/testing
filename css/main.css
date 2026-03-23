@@ -1,0 +1,925 @@
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* ===== BODY ===== */
+
+html,body{
+width:100%;
+height:100%;
+}
+
+/* ===== PAGE LAYOUT ===== */
+
+body{
+background:#000;
+min-height:100vh;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+main{
+width:100%;
+padding-top:70px;
+background:linear-gradient(
+180deg,
+#071b22,
+#7ed6d1
+);
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+width:100%;
+background:#000;
+color:#d9d9d9;
+text-align:center;
+padding:32px 20px;
+
+font-family:'Poppins', sans-serif;
+font-weight:300;
+font-size:15px;
+line-height:1.8;
+
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer p{
+margin:6px 0;
+}
+
+/* ================= POPUP BACKGROUND ================= */
+
+.muse-popup{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(12px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:99999;
+
+}
+
+/* ================= POPUP CARD ================= */
+
+.muse-card{
+
+position:relative;
+
+background:#0a0a0a;
+
+padding:35px;
+
+border-radius:24px;
+
+width:360px;
+
+text-align:center;
+
+box-shadow:
+0 40px 100px rgba(0,0,0,0.9),
+inset 0 1px rgba(255,255,255,0.05);
+
+animation:museScale 0.6s ease;
+
+}
+
+/* ================= PLAYER ================= */
+
+.muse-player{
+
+position:relative;
+
+width:260px;
+height:260px;
+
+margin:0 auto 25px auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+/* ================= ALBUM SLEEVE ================= */
+
+.album-sleeve{
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+border-radius:12px;
+
+overflow:hidden;
+
+z-index:3;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.7);
+
+}
+
+/* ================= ALBUM COVER ================= */
+
+.album-cover{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+/* ================= VINYL RECORD ================= */
+
+.vinyl-record{
+
+position:absolute;
+
+right:0;
+
+width:200px;
+height:200px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,#2ad2c9 10%,#111 30%,#000 60%);
+
+box-shadow:
+0 0 40px rgba(42,210,201,0.35),
+inset 0 0 12px rgba(255,255,255,0.05);
+
+animation:
+vinylSpin 6s linear infinite,
+vinylSlide 1.8s ease forwards;
+
+}
+
+/* ================= TITLE ================= */
+
+.muse-card h2{
+
+font-family:'Montserrat',sans-serif;
+
+letter-spacing:8px;
+
+font-size:28px;
+
+margin-bottom:10px;
+
+}
+
+/* ================= TEXT ================= */
+
+.muse-card p{
+
+font-family:'Poppins',sans-serif;
+
+font-size:13px;
+
+opacity:0.8;
+
+margin-bottom:25px;
+
+}
+
+/* ================= BUY BUTTON ================= */
+
+.muse-buy{
+
+display:inline-block;
+
+padding:12px 38px;
+
+border-radius:40px;
+
+border:1px solid white;
+
+text-decoration:none;
+
+color:white;
+
+font-family:'Montserrat',sans-serif;
+
+letter-spacing:3px;
+
+font-size:12px;
+
+transition:0.3s;
+
+}
+
+.muse-buy:hover{
+
+background:white;
+color:black;
+
+box-shadow:0 0 25px rgba(255,255,255,0.6);
+
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.muse-close{
+
+position:absolute;
+
+top:18px;
+right:22px;
+
+background:none;
+border:none;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0.7;
+
+transition:0.3s;
+
+}
+
+.muse-close:hover{
+
+opacity:1;
+transform:rotate(90deg);
+
+}
+
+/* ================= VINYL SPIN ================= */
+
+@keyframes vinylSpin{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+/* ================= VINYL SLIDE ================= */
+
+@keyframes vinylSlide{
+
+from{
+
+transform:translateX(-60px);
+opacity:0;
+
+}
+
+to{
+
+transform:translateX(70px);
+opacity:1;
+
+}
+
+}
+
+/* ================= POPUP SCALE ================= */
+
+@keyframes museScale{
+
+from{
+
+transform:scale(0.85);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+
+/* ================= HOVER EFFECT ================= */
+
+.muse-player:hover .vinyl-record{
+
+animation-play-state:paused;
+
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+width:100%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+/* BACKGROUND IMAGE */
+
+.hero-bg{
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+/* efek blur lembut */
+filter:grayscale(100%) blur(3px) brightness(0.7);
+
+transform:scale(1.05);
+}
+
+/* DARK OVERLAY */
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+/* overlay cinematic */
+background:rgba(0,0,0,0.35);
+}
+
+/* CONTENT */
+
+.hero-content{
+
+position:relative;
+
+text-align:center;
+
+color:white;
+
+z-index:2;
+
+padding:20px;
+
+}
+
+
+/* TITLE */
+
+.hero-content h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:52px;
+
+letter-spacing:3px;
+
+margin-bottom:12px;
+
+}
+
+/* SUBTITLE */
+
+.hero-content p{
+
+font-family:'Poppins',sans-serif;
+
+font-size:18px;
+
+opacity:0.85;
+
+margin-bottom:30px;
+
+}
+
+/* BUTTON */
+
+.hero-button{
+
+display:inline-block;
+
+padding:14px 42px;
+
+border:1px solid white;
+
+border-radius:10px;
+
+color:white;
+
+text-decoration:none;
+
+font-family:'Montserrat',sans-serif;
+
+letter-spacing:2px;
+
+transition:0.3s;
+
+}
+
+.hero-button:hover{
+
+background:white;
+color:black;
+
+}
+
+/* PROFILE HERO IMAGE */
+
+.profile-hero{
+
+width:100%;
+height:70vh;
+
+overflow:hidden;
+
+background:black;
+
+}
+
+.profile-image{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:grayscale(100%);
+
+}
+
+/* TITLE SECTION */
+
+.profile-title{
+
+background:black;
+
+text-align:center;
+
+padding:40px 20px;
+
+color:white;
+
+}
+
+.profile-title h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:42px;
+
+letter-spacing:2px;
+
+margin-bottom:10px;
+
+}
+
+.profile-title p{
+
+font-family:'Poppins',sans-serif;
+
+font-size:16px;
+
+opacity:0.85;
+
+}
+
+/* ABOUT JIMIN */
+
+.about-jimin{
+
+padding:100px 25px;
+background:#000;
+text-align:center;
+color:white;
+
+}
+
+.about-title{
+
+font-family:'Playfair Display',serif;
+font-size:34px;
+letter-spacing:3px;
+margin-bottom:25px;
+
+}
+
+.about-text{
+
+max-width:720px;
+margin:auto;
+
+font-family:'Montserrat',sans-serif;
+font-size:15px;
+line-height:1.8;
+
+opacity:0.85;
+
+}
+
+/* ================= */
+/* ENVELOPE PREVIEW  */
+/* ================= */
+
+.preview-update-card{
+
+max-width:360px;
+margin:auto;
+position:relative;
+
+}
+
+/* foto di dalam surat */
+
+.preview-update-img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+
+border-radius:6px;
+
+position:relative;
+z-index:1;
+
+}
+
+
+/* badan amplop */
+
+.preview-update-card::before{
+
+content:"";
+
+position:absolute;
+
+bottom:-30px;
+left:0;
+right:0;
+
+height:120px;
+
+background:#b52323;
+
+border-bottom-left-radius:10px;
+border-bottom-right-radius:10px;
+
+z-index:2;
+
+}
+
+
+/* lipatan kiri */
+
+.preview-update-card::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-30px;
+left:0;
+
+width:50%;
+height:120px;
+
+background:#a21f1f;
+
+clip-path:polygon(0 0,100% 100%,0 100%);
+
+z-index:3;
+
+}
+
+
+/* lipatan kanan */
+
+.preview-envelope-right{
+
+position:absolute;
+
+bottom:-30px;
+right:0;
+
+width:50%;
+height:120px;
+
+background:#a21f1f;
+
+clip-path:polygon(100% 0,100% 100%,0 100%);
+
+z-index:3;
+
+}
+
+
+/* isi surat */
+
+.preview-update-info{
+
+background:#f2e7d5;
+
+padding:18px;
+
+position:absolute;
+
+top:20px;
+left:10px;
+right:10px;
+
+z-index:4;
+
+border-radius:4px;
+
+text-align:center;
+
+}
+
+
+/* caption */
+
+.preview-update-caption{
+
+color:#333;
+font-size:14px;
+margin-bottom:6px;
+
+}
+
+
+/* date */
+
+.preview-update-date{
+
+font-size:12px;
+opacity:0.6;
+
+margin-bottom:10px;
+
+}
+
+
+/* tombol */
+
+.preview-update-btn{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:20px;
+
+background:#b52323;
+
+color:white !important;
+
+text-decoration:none;
+
+font-size:12px;
+
+transition:0.3s;
+
+}
+
+.preview-update-btn:hover{
+
+background:#8e1a1a;
+
+}
+
+/* BREAKING NEWS TITLE */
+
+.breaking-title{
+
+font-size:34px;
+letter-spacing:4px;
+
+color:#ff3b3b;
+
+margin-bottom:35px;
+
+text-align:center;
+
+font-weight:700;
+
+animation:breakingGlow 2s infinite alternate;
+
+}
+
+
+/* glow animation */
+
+@keyframes breakingGlow{
+
+from{
+text-shadow:0 0 5px #ff3b3b;
+}
+
+to{
+text-shadow:
+0 0 10px #ff3b3b,
+0 0 20px #ff0000;
+}
+
+}
+
+/* SECTION */
+
+/* ============================= */
+/* JIMIN ON MEDIA SECTION */
+/* ============================= */
+
+.media-section{
+padding:80px 20px;
+text-align:center;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.media-title{
+font-size:32px;
+letter-spacing:4px;
+color:white;
+margin-bottom:40px;
+}
+
+
+/* ============================= */
+/* SWIPER CONTAINER */
+/* ============================= */
+
+.media-swiper{
+max-width:600px;
+margin:auto;
+}
+
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.media-card{
+background:#0c0c0c;
+border-radius:20px;
+padding:30px;
+}
+
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+
+.media-image{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.media-quote{
+font-size:18px;
+line-height:1.6;
+margin-bottom:10px;
+color:white;
+}
+
+.media-source{
+opacity:0.7;
+margin-bottom:20px;
+color:white;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.media-link{
+display:inline-block;
+padding:10px 24px;
+border-radius:30px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.media-link:hover{
+background:white;
+color:black;
+}
+
+
+/* ============================= */
+/* NAVIGATION ROW */
+/* ============================= */
+
+.media-nav{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+margin-top:20px;
+width:100%;
+}
+
+
+/* ============================= */
+/* DOTS */
+/* ============================= */
+
+.media-nav .swiper-pagination{
+position:relative !important;
+display:flex !important;
+justify-content:center;
+align-items:center;
+gap:8px;
+width:auto;
+}
+
+.media-nav .swiper-pagination-bullet{
+width:8px;
+height:8px;
+background:white;
+opacity:0.4;
+margin:0 !important;
+}
+
+.media-nav .swiper-pagination-bullet-active{
+opacity:1;
+}
+
+
+/* ============================= */
+/* ARROWS */
+/* ============================= */
+
+.media-nav .swiper-button-prev,
+.media-nav .swiper-button-next{
+
+position:relative !important;
+
+top:auto !important;
+left:auto !important;
+right:auto !important;
+
+margin:0;
+width:auto;
+height:auto;
+
+color:white;
+
+}
+
+
+/* PANAH KECIL */
+
+.media-nav .swiper-button-prev::after,
+.media-nav .swiper-button-next::after{
+
+font-size:18px !important;
+font-weight:500;
+
+color:white;
+
+}

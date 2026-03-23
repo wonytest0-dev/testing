@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #000, #111);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+
+/* CONTAINER */
+.upload-container {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+}
+
+
+
+
+/* LOGO */
+.logo {
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* BOX */
+.upload-box {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  margin: auto;
+  align-items: center;
+}
+
+
+
+
+/* TITLE */
+.upload-box h2 {
+  margin-bottom: 20px;
+}
+
+
+
+
+/* INPUT */
+.upload-box input,
+.upload-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+
+
+
+/* TEXTAREA */
+.upload-box textarea {
+  height: 120px;
+  resize: none;
+}
+
+
+
+
+/* BUTTON (FIX DI SINI) */
+#submit-btn {
+  width: fit-content; /* 🔥 ini yang bikin bisa center */
+  padding: 12px 30px;
+  border-radius: 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 20px auto; /* 🔥 center */
+}
+
+
+
+
+#submit-btn:hover {
+  background: white;
+  color: black;
+}
+
+
+
+
+/* ARTICLE */
+.article-section {
+  white-space: pre-line;
+}
+
+
+
+
+.article-section p {
+  line-height: 1.7;
+}
+

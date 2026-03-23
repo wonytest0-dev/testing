@@ -1,0 +1,450 @@
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px) scale(0.96);
+
+filter:blur(8px);
+
+transition:all 1.2s cubic-bezier(.17,.67,.3,1);
+
+}
+
+/* ACTIVE */
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+filter:blur(0);
+
+}
+
+body{
+background:#000;
+font-family:'Poppins',sans-serif;
+
+
+}
+
+.charts-intro{
+  text-align: center;
+  color: #ddd;
+}
+/* ================= COMING SOON ================= */
+
+.comingsoon{
+
+position:relative;
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#000;
+
+overflow:hidden;
+
+}
+
+/* IMAGE */
+
+.coming-img{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:grayscale(20%) brightness(0.6);
+
+}
+
+/* DARK OVERLAY */
+
+.comingsoon::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+180deg,
+rgba(0,0,0,0.3),
+rgba(0,0,0,0.7)
+);
+
+}
+
+/* TITLE */
+
+.coming-title{
+
+position:relative;
+
+z-index:3;
+
+font-family:'Playfair Display',serif;
+
+font-size:90px;
+
+letter-spacing:8px;
+
+color:white;
+
+text-align:center;
+
+text-shadow:
+
+0 5px 20px rgba(0,0,0,0.8),
+0 0 40px rgba(255,255,255,0.2);
+
+animation:comingFade 2s ease;
+
+}
+
+/* ANIMATION */
+
+@keyframes comingFade{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.coming-title{
+
+font-size:46px;
+
+letter-spacing:4px;
+
+}
+
+}
+
+.spotify-card {
+  margin: 40px 20px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #fdf6e3;
+  color: #111;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.spotify-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* DESC */
+.spotify-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.read-btn {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ACTIVE */
+.read-btn.active {
+  background: #ffd54f;
+  color: black;
+}
+
+/* HIDDEN */
+.spotify-hidden {
+  display: none;
+  margin-top: 25px;
+}
+
+/* COUNTER */
+.counter-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.counter-info {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.total-streams {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* TABLE */
+.song-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.song-row.header {
+  font-weight: bold;
+}
+
+.spotify-table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.spotify-table th {
+  text-align: left;
+  padding: 10px 5px;
+  border-bottom: 2px solid #ddd;
+}
+
+.spotify-table td {
+  padding: 8px 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.spotify-table td:nth-child(2),
+.spotify-table td:nth-child(3) {
+  text-align: right;
+}
+
+
+/* ================= ITUNES CARD ================= */
+
+.charts-card {
+  margin: 40px 20px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #fdf6e3;
+  color: #111;
+}
+
+/* hidden */
+.charts-hidden {
+  display: none;
+  margin-top: 20px;
+}
+
+/* grid lagu */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* box lagu */
+.chart-box {
+  background: #eee;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.chart-box h4 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* SERVICE COLORS */
+.spotify { color: #1DB954; }
+.apple { color: #fa243c; }
+.itunes { color: #e91e63; }
+.deezer { color: #ff6600; }
+.shazam { color: #0088ff; }
+.youtube { color: #f30694;}
+.rank {
+  margin-left: 5px;
+}
+
+
+/* jarak antar service */
+.chart-box div[class] {
+  margin-top: 12px;
+}
+
+/* khusus baris rank */
+.rank {
+  margin-left: 8px;
+  margin-bottom: 2px;
+  font-size: 10px;
+}
+
+.stats-box {
+  margin-bottom: 15px;
+  font-size: 13px;
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.jimin-highlight-alone {
+  margin: 40px 20px;
+  padding: 20px;
+  background: #fff8e1;
+  border-radius: 20px;
+}
+
+.highlight-desc {
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* stats */
+.highlight-stats {
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* per lagu */
+.highlight-song-block {
+  margin-bottom: 20px;
+}
+
+.highlight-song-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* item */
+.highlight-item {
+  font-size: 12px;
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
+/* warna */
+.spotify { color: #1DB954; }
+.applemusic { color: #ff2d55; }
+.itunes { color: #e91e63; }
+.deezer { color: #ff6a00; }
+.shazam { color: #0088ff; }
+.youtube {color:#f30694}
+.chart-credit {
+  font-size: 11px;
+  color: #888;
+  margin: 8px 20px 20px; /* jarak dari card */
+  text-align: center;
+}
+
+/* ================= CAPTION ================= */
+
+.gallery-caption{
+
+position:absolute;
+
+bottom:45px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-family:'Montserrat',sans-serif;
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:white;
+
+text-transform:uppercase;
+
+background:rgba(0,0,0,0.4);
+
+padding:4px 10px;
+
+border-radius:10px;
+
+backdrop-filter:blur(4px);
+
+}
+
+/* ===== PROFILE EXPLORE (UNIVERSAL) ===== */
+
+.profile-explore {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin: 28px auto 0;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 14px;
+  max-width: 520px;
+}
+
+/* link */
+.profile-explore a {
+  color: #d1d5db;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 1px;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.profile-explore a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+
+  .profile-explore {
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 18px;
+  }
+
+  .profile-explore a {
+    display: inline-block;
+    margin: 4px 2px;
+  }
+
+}

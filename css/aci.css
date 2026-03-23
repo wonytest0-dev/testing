@@ -1,0 +1,277 @@
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px) scale(0.96);
+
+filter:blur(8px);
+
+transition:all 1.2s cubic-bezier(.17,.67,.3,1);
+
+}
+
+/* ACTIVE */
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+filter:blur(0);
+
+}
+
+body{
+background:#000;
+font-family:'Poppins',sans-serif;
+}
+/* ================= HERO ================= */
+
+.awards-hero{
+  width:100%;
+}
+
+.awards-hero-bg{
+  position:relative;
+  width:100%;
+  height:80vh;
+  overflow:hidden;
+}
+
+.awards-hero-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.5);
+}
+
+/* OVERLAY */
+.awards-hero-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+
+  text-align:center;
+  color:white;
+
+  width:90%;
+  max-width:700px;
+}
+
+/* TITLE */
+.awards-hero-overlay h1{
+  font-family:'Playfair Display',serif;
+  font-size:64px;
+  letter-spacing:5px;
+
+  margin-bottom:15px;
+
+  text-shadow:0 0 30px rgba(255,255,255,0.4);
+}
+
+/* SUBTEXT */
+.awards-hero-overlay p{
+  font-family:'Montserrat',sans-serif;
+  font-size:18px;
+  line-height:1.6;
+
+  color:#eaeaea;
+
+  text-shadow:0 0 15px rgba(0,0,0,0.8);
+}
+
+
+/* ================= CONTENT ================= */
+
+.awards-content{
+  padding:80px 20px;
+  background:#000;
+  color:white;
+}
+
+.awards-wrapper{
+  max-width:800px;
+  margin:auto;
+}
+
+.awards-wrapper p{
+  font-family:'Poppins',sans-serif;
+  font-size:16px;
+  line-height:1.8;
+
+  color:#dcdcdc;
+
+  margin-bottom:22px;
+
+  text-align:left;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .awards-hero-bg{
+    height:60vh;
+  }
+
+  .awards-hero-overlay h1{
+    font-size:34px;
+  }
+
+  .awards-hero-overlay p{
+    font-size:14px;
+  }
+
+  .awards-wrapper p{
+    font-size:14px;
+  }
+
+}
+
+.awards-list-section{
+  padding:100px 20px;
+  background:#000;
+  color:white;
+}
+
+.awards-main-title{
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  letter-spacing:4px;
+  margin-bottom:70px;
+}
+
+.awards-container{
+  max-width:900px;
+  margin:auto;
+}
+
+.award-year{
+  margin-bottom:90px;
+}
+
+.award-year h3{
+  font-size:28px;
+  margin-bottom:20px;
+  font-family:'Montserrat',sans-serif;
+  color:#ffd54f;
+}
+
+/* LIST */
+.award-year ul{
+  padding-left:20px;
+}
+
+.award-year li{
+  font-family:'Poppins',sans-serif;
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:12px;
+  color:#ddd;
+}
+
+/* IMAGE */
+.award-year img{
+  width:100%;
+  margin-top:25px;
+  border-radius:18px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.8);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .awards-main-title{
+    font-size:32px;
+  }
+
+  .award-year h3{
+    font-size:22px;
+  }
+
+  .award-year li{
+    font-size:14px;
+  }
+
+}
+
+/* ================= CAPTION ================= */
+
+.gallery-caption{
+
+position:absolute;
+
+bottom:45px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-family:'Montserrat',sans-serif;
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:white;
+
+text-transform:uppercase;
+
+background:rgba(0,0,0,0.4);
+
+padding:4px 10px;
+
+border-radius:10px;
+
+backdrop-filter:blur(4px);
+
+}
+
+/* ===== PROFILE EXPLORE (UNIVERSAL) ===== */
+
+.profile-explore {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin: 28px auto 0;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 14px;
+  max-width: 520px;
+}
+
+/* link */
+.profile-explore a {
+  color: #d1d5db;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 1px;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.profile-explore a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+
+  .profile-explore {
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 18px;
+  }
+
+  .profile-explore a {
+    display: inline-block;
+    margin: 4px 2px;
+  }
+
+}

@@ -1,0 +1,155 @@
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px) scale(0.96);
+
+filter:blur(8px);
+
+transition:all 1.2s cubic-bezier(.17,.67,.3,1);
+
+}
+
+/* ACTIVE */
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+filter:blur(0);
+
+}
+
+body{
+background:#000;
+font-family:'Poppins',sans-serif;
+}
+
+.community-title{
+color: white; /* ⬅️ WAJIB */
+font-size: 22px;
+text-align: center;
+margin: 20px 0;
+letter-spacing: 3px;
+display: block;
+}
+
+.community-subtitle{
+color:#ccc;
+font-size:14px;
+text-align:center;
+max-width:600px;
+margin:0 auto 25px;
+line-height:1.6;
+}
+
+.community-card{
+background:#fff;
+padding:20px;
+border-radius:12px;
+border:1px solid #eee;
+}
+
+/* IMAGE FULL */
+.community-image{
+width:100%;
+height:auto;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.community-desc{
+font-size:15px;
+line-height:1.7;
+color:#444;
+}
+
+.community-date{
+font-size:13px;
+opacity:0.6;
+margin-top:10px;
+margin-bottom:15px; /* ⬅️ JARAK KE TOMBOL */
+display:block;
+}
+
+.project-btn,
+.community-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #FFD84D; /* kuning */
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* hover (pas disentuh / mau klik) */
+.project-btn:hover,
+.community-btn:hover {
+  background: #4DA6FF; /* biru terang */
+  color: #fff;
+}
+
+/* saat ditekan */
+.project-btn:active,
+.community-btn:active {
+  background: #3399FF;
+  transform: scale(0.95);
+}
+
+.project-btn:hover,
+.community-btn:hover {
+  background: #4DA6FF;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(77, 166, 255, 0.7);
+}
+
+/* ===== PROFILE EXPLORE ===== */
+
+.profile-explore {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin-top: 28px;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 14px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* link */
+.profile-explore a {
+  color: #d1d5db;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 1px;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.profile-explore a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .profile-explore {
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 18px;
+  }
+
+  .profile-explore a {
+    display: inline-block;
+    margin: 4px 2px;
+  }
+
+}

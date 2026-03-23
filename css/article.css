@@ -1,0 +1,259 @@
+/* REVEAL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(80px) scale(0.96);
+  filter:blur(8px);
+  transition:all 1.2s cubic-bezier(.17,.67,.3,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  filter:blur(0);
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  letter-spacing: 6px;
+  font-weight: 300;
+  padding: 20px 0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* CARD */
+.article-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* 🔥 IMAGE (CROP) */
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.article-card:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.article-content {
+  padding: 15px;
+}
+
+/* TITLE */
+.article-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* META */
+.meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* 🔥 DESC (PREVIEW) */
+.desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.read-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: transparent;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.read-btn:hover {
+  background: #111;
+  color: white;
+}
+
+/* FLOATING LOGIN */
+.floating-auth{
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.login-btn{
+  border: 1px solid white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* HEADER SECTION */
+.articles-header{
+  text-align: center;
+  padding: 60px 20px 30px;
+  color: aliceblue;
+}
+
+.articles-title{
+  font-size: 48px;
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.articles-desc{
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+/* ========================= */
+/* 🔥 MODAL FULL ARTICLE */
+/* ========================= */
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+/* BOX */
+.modal-content{
+  background: white;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* CLOSE */
+#close-modal{
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* IMAGE FULL */
+.modal-content img{
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content{
+  background: white;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+
+  max-height: 80vh;   /* 🔥 batas tinggi */
+  overflow-y: auto;   /* 🔥 scroll dalam modal */
+
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content p{
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.modal-content h2{
+  margin-bottom: 10px;
+}
+
+/* ===== PROFILE EXPLORE ===== */
+
+.profile-explore {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin-top: 25px;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 10px; /* biar gak mepet di HP */
+}
+
+/* link */
+.profile-explore a {
+  color: #e5e5e5;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 1px;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+/* hover */
+.profile-explore a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .profile-explore {
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 15px;
+  }
+
+  .profile-explore a {
+    display: inline-block;
+    margin: 3px 2px; /* biar gak nempel */
+  }
+
+}

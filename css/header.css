@@ -1,0 +1,416 @@
+/* ================= HEADER ================= */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:18px 24px;
+
+background:#000000;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 6px 30px rgba(0,0,0,0.25);
+
+z-index:9999;
+
+box-sizing:border-box; /* FIX supaya tidak keluar layar */
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+height:34px;
+width:auto;
+object-fit:contain;
+filter:drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+
+.logo span{
+font-family:'Montserrat',sans-serif;
+font-weight:300;
+letter-spacing:6px;
+font-size:18px;
+color:white;
+text-transform:uppercase;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger{
+
+width:28px;
+height:20px;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+background:none;
+border:none;
+
+cursor:pointer;
+
+z-index:3000;
+}
+
+.hamburger span{
+display:block;
+width:100%;
+height:3px;
+background:#ffffff;
+border-radius:2px;
+transition:0.35s ease;
+}
+
+/* HAMBURGER → X */
+
+/* ================= HAMBURGER ================= */
+
+.hamburger{
+width:30px;
+height:22px;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+background:none;
+border:none;
+
+cursor:pointer;
+
+z-index:3000;
+}
+
+/* garis hamburger */
+
+.hamburger span{
+display:block;
+width:100%;
+height:2.5px;
+
+background:#ffffff;
+
+border-radius:10px;
+
+transition:all 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+/* garis tengah lebih pendek */
+
+.hamburger span:nth-child(2){
+width:75%;
+margin-left:auto;
+}
+
+/* ================= ANIMASI X ================= */
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,6px);
+width:100%;
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+transform:translateX(20px);
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(5px,-6px);
+width:100%;
+}
+
+/* ================= HOVER EFFECT ================= */
+
+.hamburger:hover span{
+background:#ff2a2a;
+}
+
+
+/* ================= OVERLAY ================= */
+
+#overlay{
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+opacity:0;
+visibility:hidden;
+
+transition:0.3s;
+
+z-index:998;
+}
+
+#overlay.active{
+opacity:1;
+visibility:visible;
+}
+
+/* ================= SIDE MENU ================= */
+
+.side-menu{
+
+position:fixed;
+
+top:0;
+right:-100%;
+
+width:65%;
+height:100vh;
+
+padding:90px 35px;
+
+background:#000000;
+
+border-left:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+-10px 0 40px rgba(0,0,0,0.6),
+inset 0 1px rgba(255,255,255,0.08);
+
+transition:0.45s cubic-bezier(.77,0,.18,1);
+
+z-index:999;
+}
+
+.side-menu.active{
+right:0;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.close-menu{
+
+position:absolute;
+top:20px;
+right:25px;
+
+font-size:28px;
+
+background:none;
+border:none;
+
+color:white;
+
+cursor:pointer;
+
+z-index:1001;
+
+}
+
+/* ================= MENU ================= */
+
+.menu-list{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.menu-list li{
+margin:20px 0;
+}
+
+.menu-list a{
+color:white;
+text-decoration:none;
+
+font-size:20px;
+
+letter-spacing:0.5px;
+
+transition:0.25s;
+}
+
+.menu-list a:hover{
+opacity:0.7;
+transform:translateX(4px);
+}
+
+/* ================= MENU TITLE ================= */
+
+.menu-title{
+color:white;
+
+font-size:20px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+cursor:pointer;
+
+transition:0.25s;
+}
+
+.menu-title:hover{
+opacity:0.7;
+transform:translateX(4px);
+}
+
+/* ================= ARROW ================= */
+
+.arrow{
+opacity:0.7;
+transition:0.3s;
+}
+
+/* ================= SUBMENU ================= */
+
+.submenu{
+max-height:0;
+overflow:hidden;
+
+transition:0.35s;
+
+padding-left:12px;
+}
+
+.has-sub.active .submenu{
+max-height:300px;
+margin-top:10px;
+}
+
+.has-sub.active .arrow{
+transform:rotate(90deg);
+opacity:1;
+}
+
+.submenu li{
+margin:10px 0;
+}
+
+.submenu a{
+font-size:12px;
+letter-spacing:3px;
+opacity:0.9;
+}
+
+/* ================= FONT ================= */
+
+.menu-list a,
+.menu-title{
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:300;
+
+letter-spacing:6px;
+
+text-transform:none;
+
+font-size:15px;
+
+}
+/* SUBMENU */
+
+.submenu a{
+
+font-family:'Poppins',sans-serif;
+
+font-size:13px;
+
+letter-spacing:1px;
+
+opacity:0.9;
+
+}
+
+
+.auth-buttons{
+  position:absolute;
+  top:20px;
+  right:20px;
+  display:flex;
+  gap:10px;
+}
+
+/* LOGIN */
+.login-btn{
+  padding:8px 18px;
+  border:1px solid white;
+  border-radius:20px;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:1px;
+  transition:0.3s;
+}
+
+.login-btn:hover{
+  background:white;
+  color:black;
+}
+
+/* ADMIN */
+.admin-btn{
+  padding:8px 18px;
+  border:1px solid rgba(255,255,255,0.4);
+  border-radius:20px;
+  color:rgba(255,255,255,0.7);
+  text-decoration:none;
+  font-size:12px;
+  transition:0.3s;
+}
+
+.admin-btn:hover{
+  background:white;
+  color:black;
+}
+
+.auth-buttons{
+  position:absolute;
+  top:20px;
+  right:80px; /* 🔥 INI YANG GESER KE KIRI */
+  display:flex;
+  gap:10px;
+}
+
+/* container */
+.auth-buttons{
+  position:absolute;
+  top:20px;
+  right:90px;
+  display:flex;
+  align-items:center;
+}
+
+/* tombol dari JS */
+#auth-box a,
+#auth-box button{
+  padding:8px 18px;
+  border:1px solid white;
+  border-radius:20px;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:1px;
+  background:transparent;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* hover */
+#auth-box a:hover,
+#auth-box button:hover{
+  background:white;
+  color:black;
+}
