@@ -1,0 +1,246 @@
+<section class="calendar-section">
+
+<h2 class="calendar-title">Jimin Calendar</h2>
+
+<div class="calendar-header">
+<button id="prevMonth">‹</button>
+<div id="calendarMonth"></div>
+<button id="nextMonth">›</button>
+</div>
+
+<div class="calendar-days">
+<span>Sun</span>
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+</div>
+
+<div id="calendarDates" class="calendar-dates"></div>
+
+</section>
+
+
+<!-- EVENT DATA (DIATUR DI HTML SAJA) -->
+
+<div id="calendarEvents" style="display:none">
+
+<div class="event-data"
+data-day="13"
+data-month="10"
+data-icon="🎂"
+data-title="🎂Park Jimin Birthday"
+data-text="October 13 — Birthday of Park Jimin"
+data-image="images/calendar/jimin-birthday.jpg"></div>
+
+<div class="event-data"
+data-day="13"
+data-month="1"
+data-icon="🎵"
+data-title="VIBE Aniversary"
+data-text="Taeyang VIBE Feat Jimin Aniversary"
+data-image="/images/calendar/vibeaniv.jpg"></div>
+
+<div class="event-data"
+data-day="24"
+data-month="1"
+data-icon="🐥 "
+data-title="🐥  Jimin First Tweet"
+data-text="January 24, 2013"
+data-link="https://twitter.com/BTS_twt/status/294487847496560640"
+data-image="/images/calendar/firstwt.jpg">
+</div>
+
+<div class="event-data"
+data-day="12"
+data-month="1"
+data-icon="🎉"
+data-title="🎉Jimin of Member BTS🎉"
+data-text="Jimin Revealed as Member BTS 2013"
+data-image="/images/calendar/jimemaniv.jpg"></div>
+
+<div class="event-data"
+data-day="21"
+data-month="2"
+data-icon="🎵"
+data-title="Filter & Friends"
+data-text="2020 Released Filter & Friends on BTS Album "
+data-image="/images/calendar/filteraniv.jpg"></div>
+
+<div class="event-data"
+data-day="06"
+data-month="3"
+data-icon="🎵"
+data-title="Promise & Christmas Love"
+data-text="2023 Released Promise & CL official "
+data-image="/images/calendar/clofficial.jpg"></div>
+
+<div class="event-data"
+data-day="17"
+data-month="3"
+data-icon="🎵"
+data-title="Set Me Free pt.2"
+data-text="2023 Released Set Me Free Pt. 2 "
+data-image="/images/calendar/smfaniv.jpg"></div>
+ 
+<div class="event-data"
+data-day="24"
+data-month="3"
+data-icon="💿 "
+data-title="🎉FACE Aniversary🎉 "
+data-text="2023 Released FACE & Like Crazy "
+data-image="/images/calendar/faceaniv.jpg"></div>
+
+<div class="event-data"
+data-day="15"
+data-month="5"
+data-icon="🐥"
+data-title="Jimin Come to Seoul"
+data-text="2012 Jimin Come to Seoul as Trainee"
+data-image="/images/calendar/jimcome.jpg"></div>
+
+<div class="event-data"
+data-day="18"
+data-month="5"
+data-icon="🎵"
+data-title="Angel Pt.1"
+data-text="2023 Fast X ost Released"
+data-image="/images/calendar/angel.jpg"></div>
+
+<div class="event-data"
+data-day="03"
+data-month="4"
+data-icon="🏆"
+data-title="🏆BB Hot 100🏆"
+data-text="2023 Fist Kpop Soloist on BB no 1 Artist & hot 100"
+data-image="/images/calendar/hot.jpg"></div>
+
+<div class="event-data"
+data-day="11"
+data-month="06"
+data-icon="🐥"
+data-title="Jimin Return From Military"
+data-text="2025 Jimin Return From Military Service"
+data-image="/images/calendar/military.jpg"></div>
+
+<div class="event-data"
+data-day="23"
+data-month="11"
+data-icon="🏆"
+data-title="🏆Daesang MAMA🏆"
+data-text="2024 First Daesang Fan Choice Award MAMA"
+data-image="/images/calendar/daesang.jpg"></div>
+
+<div class="event-data"
+data-day="15"
+data-month="6"
+data-icon="🎵"
+data-title="Angel Pt.2"
+data-text="2023 Fast X ost Released"
+data-image="/images/calendar/angel2.jpg"></div>
+
+<div class="event-data"
+data-day="28"
+data-month="6"
+data-icon="🎵"
+data-title="S G M B"
+data-text="2024 Released Smeraldo Garden Marching Band"
+data-image="/images/calendar/sgmb.jpg"></div>
+
+<div class="event-data"
+data-day="19"
+data-month="7"
+data-icon="💿 "
+data-title="🎉MUSE Aniversary🎉 "
+data-text="2024 Released MUSE & WHO "
+data-image="/images/calendar/muse.jpg"></div>
+
+<div class="event-data"
+data-day="02"
+data-month="8"
+data-icon="🎵"
+data-title="Be Mine Eng"
+data-text="2024 Released Be Mine English Version"
+data-image="/images/calendar/bemine.jpg"></div>
+
+<div class="event-data"
+data-day="24"
+data-month="8"
+data-icon="🎵"
+data-title="Serendipity-full"
+data-text="2017 Released Serendipity Full Length Edition"
+data-image="/images/calendar/srn.jpg"></div>
+
+<div class="event-data"
+data-day="05"
+data-month="9"
+data-icon="🎵"
+data-title="Serendipity-intro"
+data-text="2017 Released Intro Serendipity"
+data-image="/images/calendar/seren.jpg"></div>
+
+<div class="event-data"
+data-day="06"
+data-month="9"
+data-icon="🎵"
+data-title="L I E"
+data-text="2016 Released Lie Short Film"
+data-image="/images/calendar/lie.jpg"></div>
+
+<div class="event-data"
+data-day="06"
+data-month="12"
+data-icon="🐥"
+data-title="J.M Instagram Account"
+data-text="2021 Jimin Open His Personal Instagram"
+data-image="/images/calendar/ig.jpg"></div>
+
+<div class="event-data"
+data-day="12"
+data-month="12"
+data-icon="🎵"
+data-title="Closer Than This"
+data-text="2022 Released Closer Than This"
+data-image="/images/calendar/ctt.jpg"></div>
+
+<div class="event-data"
+data-day="24"
+data-month="12"
+data-icon="🎵"
+data-title="Christmas Love"
+data-text="2020 Released Christmas Love"
+data-image="/images/calendar/cl1.jpg"></div>
+
+<div class="event-data"
+data-day="31"
+data-month="12"
+data-icon="🎵"
+data-title="Promise"
+data-text="2018 Released Promise"
+data-image="/images/calendar/prom.jpg"></div>
+
+
+
+
+</div>
+
+
+<!-- POPUP -->
+
+<div id="eventPopup" class="event-popup">
+
+<div class="popup-card">
+
+<button class="popup-close" onclick="closeEvent()">×</button>
+
+<img id="eventImage" class="popup-image">
+
+<h3 id="eventTitle"></h3>
+
+<p id="eventText"></p>
+
+</div>
+
+</div>

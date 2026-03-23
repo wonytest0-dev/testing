@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Submit Article | JIMINATION</title>
+
+
+<link rel="stylesheet" href="/css/upload.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<div class="upload-container">
+
+
+  <h1 class="logo">JIMINATION</h1>
+
+
+  <div class="upload-box">
+
+
+    <h2>Submit Article</h2>
+
+
+    <input type="text" id="title" placeholder="Article Title">
+    <input type="text" id="writer" placeholder="Writer Name">
+
+
+    <!-- 🔥 EDITOR MULTI SECTION -->
+    <div id="editor-container">
+
+
+      <!-- 🔥 FIX: pakai block supaya tidak ketukar -->
+      <div class="block">
+        <input type="text" class="image-field" placeholder="Image URL">
+        <textarea class="content-field" placeholder="Write your article here..."></textarea>
+      </div>
+
+
+    </div>
+
+
+    <!-- 🔥 ADD SECTION BUTTON -->
+    <button type="button" onclick="addBlock()">+ Add Section</button>
+
+
+    <button id="submit-btn">SUBMIT</button>
+
+
+  </div>
+
+
+</div>
+
+
+<script type="module" src="/javascript/upload.js"></script>
+
+
+<!-- 🔥 JS TAMBAHAN (FIX PAIRING, TIDAK GANGGU CSS) -->
+<script>
+function addBlock(){
+  const container = document.getElementById("editor-container");
+
+
+  const img = document.createElement("input");
+  img.type = "text";
+  img.placeholder = "Image URL";
+  img.className = "image-field";
+
+
+  const text = document.createElement("textarea");
+  text.placeholder = "Write your article here...";
+  text.className = "content-field";
+
+
+  // 🔥 FIX: bungkus dalam block
+  const block = document.createElement("div");
+  block.className = "block";
+
+
+  block.appendChild(img);
+  block.appendChild(text);
+
+
+  container.appendChild(block);
+}
+</script>
+
+
+</body>
+</html>
+

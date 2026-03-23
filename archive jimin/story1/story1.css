@@ -1,0 +1,247 @@
+body{
+
+margin:0;
+background:#111;
+display:flex;
+justify-content:center;
+font-family:'Patrick Hand', cursive;
+
+}
+
+
+/* PAPER */
+
+.paper{
+
+background:#F7F1D5;
+
+box-shadow:0 10px 35px rgba(0,0,0,0.4);
+
+border-radius:8px;
+
+max-width:700px;
+width:95%;
+
+padding:60px 30px;
+
+color:#3a2a1f;
+
+margin:40px auto;
+
+}
+
+
+/* PHOTO */
+
+.childhood-photo{
+
+width:180px;
+
+display:block;
+
+margin:0 auto 25px;
+
+border-radius:10px;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+
+}
+
+/* TITLE */
+
+.story-title{
+
+font-family:'Playfair Display', serif;
+
+font-size:26px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+line-height:1.4;
+
+}
+
+
+/* SCREENSHOT */
+
+.story-image{
+
+width:100%;
+
+border-radius:8px;
+
+margin-bottom:30px;
+
+}
+
+
+/* TRANSLATION */
+
+.translation{
+
+font-size:19px;
+
+line-height:1.9;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.paper{
+
+padding:40px 20px;
+
+}
+
+.story-title{
+
+font-size:22px;
+
+}
+
+.translation{
+
+font-size:18px;
+
+}
+
+}
+
+/* ========================= */
+/* JIMIN STORY PAGE */
+/* ========================= */
+
+.jm-story-section{
+
+padding:70px 20px;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+
+/* PAPER */
+
+.jm-story-paper{
+
+background:#fff6dc;
+
+max-width:720px;
+
+width:100%;
+
+padding:35px 25px;
+
+border-radius:8px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.35);
+
+}
+
+
+/* PHOTO */
+
+.jm-story-photo{
+
+width:160px;
+
+display:block;
+
+margin:auto;
+
+margin-bottom:25px;
+
+border-radius:10px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+}
+
+
+/* TITLE */
+
+.jm-story-title{
+
+font-size:24px;
+
+line-height:1.4;
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#2b1d12;
+
+}
+
+
+/* SCREENSHOT */
+
+.jm-story-proof{
+
+width:100%;
+
+border-radius:8px;
+
+margin-bottom:30px;
+
+}
+
+
+/* TEXT */
+
+.jm-story-text{
+
+font-family:'Patrick Hand', cursive;
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#2b1d12;
+
+}
+
+.jm-story-text p{
+
+margin-bottom:18px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.jm-story-paper{
+
+padding:30px 18px;
+
+}
+
+.jm-story-title{
+
+font-size:21px;
+
+}
+
+.jm-story-text{
+
+font-size:16px;
+
+}
+
+.jm-story-photo{
+
+width:140px;
+
+}
+
+}
